@@ -1,7 +1,7 @@
 /** lab32functs.h
 * ===========================================================
-* Name: FIRST LAST, DATE
-* Section: SECTION
+* Name: Benjamin Tat
+* Section: T6
 * Project: Lab 33
 * ===========================================================  */
 

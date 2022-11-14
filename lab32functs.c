@@ -1,7 +1,7 @@
 /** lab32functs.c
 * ===========================================================
-* Name: FIRST LAST, DATE
-* Section: SECTION
+* Name: Benjamin Tat
+* Section: T6
 * Project: Lab 32
 * ===========================================================  */
 
@@ -18,17 +18,33 @@ int factorial(int N) {
 }
 
 int tail_factorial(int N, int accum) {
-    
-    return 0.0;
+    if (N == 0) {
+        return accum;
+    }
+    else {
+        return tail_factorial(N-1, N*accum);
+    }
 }
 
 double calculateDecayDuration(int N, double halflifeInYears, double accum) {
-    
-    return 0.0;
+    if (N == 0) {
+        return accum;
+    }
+    else {
+        return calculateDecayDuration(N/2, halflifeInYears, accum+halflifeInYears);
+    }
 }
 
 int collatz(int N, int accum) {
-
-    return 0;
+    if (N == 1) {
+        return accum;
+    }
+    else {
+        if (N%2 == 0) {
+            return collatz(N/2, accum + 1);
+        }
+        else {
+            return collatz(3*N + 1, accum + 1);
+        }
+    }
 }
-
